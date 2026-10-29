@@ -1,0 +1,17 @@
+{
+  "name": "patient-case-taking-system",
+  "version": "1.0.0",
+  "description": "Patient Case Taking & Clinic Management System for small clinics",
+  "scripts": {
+    "setup": "npm install && cd server && npm install && npx prisma db push && npm run seed && cd ../client && npm install",
+    "start": "node server/src/index.js",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
